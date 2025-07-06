@@ -13,7 +13,7 @@ A minimal terminal emulator for the X Window System featuring:
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting started)
+- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
