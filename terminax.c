@@ -102,7 +102,6 @@ void d_t() {
         XFlush(d);
 }
 
-/*
 pid_t sp() {
         struct termios tp;
         if (tcgetattr(STDIN_FILENO, &tp) == -1) {
@@ -121,8 +120,8 @@ pid_t sp() {
         }
         return pid;
 }
-*/
 
+/*
 pid_t sp() {
 	struct termios tp;
 	if (tcgetattr(STDIN_FILENO, &tp) == -1) {
@@ -145,6 +144,7 @@ pid_t sp() {
 	}
 	return pid;
 }
+*/
 
 void h_r(int Wd, int Hd) {
         x = Wd;
