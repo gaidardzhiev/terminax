@@ -102,6 +102,7 @@ void d_t() {
         XFlush(d);
 }
 
+/*
 pid_t sp() {
         struct termios tp;
         if (tcgetattr(STDIN_FILENO, &tp) == -1) {
@@ -114,11 +115,35 @@ pid_t sp() {
                 exit(1);
         }
         if (pid == 0) {
-                execlp("/bin/zsh", "/bin/zsh", NULL);
+                execlp("/usr/bin/dash", "/usr/bin/dash", NULL);
                 perror("execlp");
                 exit(1);
         }
         return pid;
+}
+*/
+
+pid_t sp() {
+	struct termios tp;
+	if (tcgetattr(STDIN_FILENO, &tp) == -1) {
+		perror("tcgetattr");
+		exit(1);
+	}
+	//disable canonical mode and echo on the slave side of the pty
+	tp.c_lflag &= ~(ICANON | ECHO);
+	tp.c_cc[VMIN] = 1;  //minimum number of characters for noncanonical read
+	tp.c_cc[VTIME] = 0; //timeout
+	pid_t pid = forkpty(&p, NULL, &tp, NULL);
+	if (pid == -1) {
+		perror("forkpty");
+		exit(1);
+	}
+	if (pid == 0) {
+		execlp("/usr/bin/dash", "/usr/bin/dash", NULL);
+		perror("execlp");
+		exit(1);
+	}
+	return pid;
 }
 
 void h_r(int Wd, int Hd) {
