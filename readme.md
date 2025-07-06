@@ -40,9 +40,9 @@ A minimal terminal emulator for the X Window System featuring:
 ### Prerequisites
 
 - `*nix` OS with X11
-- X11 development libraries (`libx11-dev` or equivalent)
 - C compiler (`gcc` recommended)
-- Standard C library **glibc is recommended**
+- Standard C library (`glibc` recommended)
+- X11 development libraries (`libx11-dev` or equivalent)
 - `make` (optional)
 
 ### Installation
