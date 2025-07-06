@@ -46,9 +46,9 @@ A minimal terminal emulator for the X Window System featuring:
 
 ### Prerequisites
 
-- Linux or Unix-like OS with X11
+- `*nix` OS with X11
 - X11 development libraries (`libx11-dev` or equivalent)
-- C compiler (gcc recommended)
+- C compiler (`gcc` recommended)
 - `make` (optional)
 
 ### Installation
