@@ -53,11 +53,13 @@ A minimal terminal emulator for the X Window System featuring:
 
 ### Installation
 
-`git clone https://github.com/gaidardzhiev/terminax`
-`cd terminax`
-`make`
-'make strip`
-`make install`
+```
+git clone https://github.com/gaidardzhiev/terminax
+cd terminax
+make
+make strip
+make install
+```
 
 ---
 
