@@ -5,7 +5,7 @@ A minimal terminal emulator for the X Window System featuring:
 - Line wrapping based on window width
 - Infinite vertical scrollback with Up/Down arrow keys
 - Dynamic window resizing with automatic rewrapping
-- Runs a shell  via pseudoterminal (PTY)
+- Runs a shell via pseudoterminal (PTY)
 - Basic keyboard input forwarding and output rendering
 
 ---
@@ -13,7 +13,6 @@ A minimal terminal emulator for the X Window System featuring:
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -33,12 +32,6 @@ A minimal terminal emulator for the X Window System featuring:
 - Responsive to window resize events
 - Scroll through terminal history with arrow keys
 - Easily extendable for ANSI escape code parsing and mouse support
-
----
-
-## Demo
-
-![Terminal Emulator Screenshot](./screenshot.png)
 
 ---
 
