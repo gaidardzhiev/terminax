@@ -24,14 +24,11 @@ Resizes dynamically, rewrapping text on window resize.
 .IP
 Basic handling of keyboard input and window expose events.
 
-.SH OPTIONS
-This minimal implementation does not currently support command-line options.
-
 .SH USAGE
 Run the program from a graphical environment with an X server running:
 .PP
 .nf
-$ ./terminal_emulator
+$ ./terminax
 .fi
 .PP
 Use the Up and Down arrow keys to scroll through the terminal output.
@@ -42,9 +39,6 @@ Resize the window to change the terminal dimensions; text will rewrap accordingl
 The program uses the
 .B DISPLAY
 environment variable to connect to the X server.
-
-.SH FILES
-None specific to this program.
 
 .SH LIMITATIONS
 .IP
