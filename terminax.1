@@ -1,0 +1,69 @@
+.TH TERMINAL_EMULATOR 1 "July 2025" "1.0" "Minimal X11 Terminal Emulator"
+.SH NAME
+terminax \- minimal X11 terminal emulator with line wrapping and scrolling
+.SH SYNOPSIS
+.B terminax
+.SH DESCRIPTION
+.B terminalx
+is a simple terminal emulator for the X Window System.
+It creates an X11 window, runs a shell (default: /bin/zsh) connected via a pseudoterminal,
+and displays the shell output with basic line wrapping and infinite scrollback.
+
+The terminal window features a black background with bright green text, reminiscent of
+classic terminals.
+
+.SH FEATURES
+.IP
+Runs a shell via a pseudoterminal (PTY) and forwards keyboard input and output.
+.IP
+Supports line wrapping based on window width.
+.IP
+Infinite vertical scrolling with Up and Down arrow keys.
+.IP
+Resizes dynamically, rewrapping text on window resize.
+.IP
+Basic handling of keyboard input and window expose events.
+.IP
+Black background and green font colors for a hacker aesthetic.
+
+.SH OPTIONS
+This minimal implementation does not currently support command-line options.
+
+.SH USAGE
+Run the program from a graphical environment with an X server running:
+.PP
+.nf
+$ ./terminal_emulator
+.fi
+.PP
+Use the Up and Down arrow keys to scroll through the terminal output.
+.PP
+Resize the window to change the terminal dimensions; text will rewrap accordingly.
+
+.SH ENVIRONMENT
+The program uses the
+.B DISPLAY
+environment variable to connect to the X server.
+
+.SH FILES
+None specific to this program.
+
+.SH LIMITATIONS
+.IP
+Does not fully parse ANSI escape sequences; output formatting is limited.
+.IP
+No support for mouse input or clipboard.
+.IP
+No UTF-8 or advanced font rendering.
+
+.SH SEE ALSO
+.BR xterm (1),
+.BR st (1),
+.BR rxvt (1),
+.BR X (7)
+
+.SH AUTHOR
+Written by Mr. Ivan Gaydardzhiev
+
+.SH COPYRIGHT
+This software is released under the GPL3 License.
