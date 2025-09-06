@@ -1,3 +1,8 @@
+/*
+ * Copyright (C) 2025 Ivan Gaydardzhiev
+ * Licensed under the GPL-3.0-only
+ */
+
 #define _XOPEN_SOURCE 600
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,24 +20,13 @@
 #define F 8
 #define T 16
 
-Display *d;
-Window w;
-GC g;
-int p;
+Display *d; Window w; GC g; int p;
 
 typedef struct {
         char *t;
 } L;
 
-L l[M];
-int c = 0;
-
-int s = 0;
-
-int x = W;
-int y = H;
-int z = W / F;
-int r = H / T;
+L l[M]; int c = 0; int s = 0; int x = W; int y = H; int z = W / F; int r = H / T;
 
 void f() {
         for (int i = 0; i < c; i++) {
